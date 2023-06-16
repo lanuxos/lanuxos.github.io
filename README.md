@@ -12,7 +12,7 @@
 ## Database [Directory]
     - MongoDB [Directory]
     - MySQL [Directory]
-    - PosgreSQL [Directory]
+    - PostgreSQL [Directory]
     - SQLite [Directory]
 ## Dart [Directory]
     - Dart Installation [Directory]
@@ -24,7 +24,7 @@
         - Widgets [Directory]
 ## Docker [Directory]
     - Django [Directory]
-    - Django Rest Framework [Directory]
+    - DRF [Directory]
     - FastAPI [Directory]
     - Fiber [Directory]
 ## Golang [Directory]
@@ -41,7 +41,7 @@
     - Setting up your mac for web dev env
     - Text Editor Extensions
 ## PHP [Directory]
-    - Setting up dev environment [Directory]
+    - Dev environment [Directory]
     - Basic PHP [Directory]
     - PHP Object Oriented Programming [Directory]
     - Laravel [Directory]
@@ -67,9 +67,9 @@
                 - extend.html
             - Tests [Directory]
             - Views [Directory]
-                - Authentication.py
-                - CRUD.py
-                - Decorators.py
+                - authentication.py
+                - crud.py
+                - decorators.py
             - urls [Directory]
                 - Project's urls.py
                 - Application's urls.py
@@ -85,8 +85,8 @@
         - Function Based View [Directory]
             - Tests [Directory]
             - Views [Directory]
-                - Authentication.py
-                - CRUD.py
+                - authentication.py
+                - crud.py
             - urls [Directory]
                 - Project's urls.py
                 - Application's urls.py
