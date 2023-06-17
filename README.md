@@ -2,7 +2,11 @@
 # Lanuxos Portfolio
 
 ## Home
-## About
+## Portfolio
+## Basic Web Dev
+    - css
+    - html
+    - javaScript
 ## Cloud [Directory]
     - Azure [Directory]
     - DigitalOcean [Directory]
