@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/css.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-icons.css">
+    <title>La Diary</title>
+</head>
+
+<body class="bg-dark text-secondary">
+    <div class="container-fluid">
+        <div class="row my-5">
+            <!-- left menu/navbar -->
+            <div include-html="leftMenu.html"></div>
+        </div>
+
+        <!-- body -->
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="main-timeline">
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="bi bi-book"></i></div>
+                            <h3 class="title">EDUCATIONS</h3>
+                            <p class="description">
+                                - Master/Bachelor's degree in "Environment Science";
+                            </p>
+                            <p class="description">
+                                - Vocational degree in "Information Technology Management" and "English Business".
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="bi bi-cpu"></i></div>
+                            <h3 class="title">SKILLS</h3>
+                            <p class="description">
+                                Good in Python, Django, Django Rest Framework, MySQL, Tkinter, PHP, HTML, CSS, JavaScript, Bootstrap.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="bi bi-motherboard"></i></div>
+                            <h3 class="title">EXPERIENCES</h3>
+                            <p class="description">
+                                Handed on: DigitalOcean, PosgreSQL, Dart, Flutter, Docker, Golang, Fiber, Laravel, FastAPI, Flask, MicroPython, Web Scraping...
+                            </p>
+                        </a>
+                    </div>
+                    <div class="timeline">
+                        <a href="#" class="timeline-content">
+                            <div class="timeline-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h3 class="title">GOALS</h3>
+                            <p class="description">
+                                Future goals: Azure, Google Cloud Platform, Heroku, MongoDB, Data Science, Security...
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- footer -->
+            <div include-html="footer.html"></div>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        /* include html file in html */
+        /* usage:: <div include-html="HTML_FILE_NAME.html"></div>*/
+        function includeHTML() {
+            var elementByTagName, index, element, file, xHttp;
+            /* Loop through a collection of all HTML elements: */
+            elementByTagName = document.getElementsByTagName("*");
+            for (index = 0; index < elementByTagName.length; index++) {
+                element = elementByTagName[index];
+                /*search for elements with a certain attribute:*/
+                file = element.getAttribute("include-html");
+                if (file) {
+                    /* Make an HTTP request using the attribute value as the file name: */
+                    xHttp = new XMLHttpRequest();
+                    xHttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                element.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                element.innerHTML = "Error 404, page not found.";
+                            }
+                            /* Remove the attribute, and call this function once more: */
+                            element.removeAttribute("include-html");
+                            includeHTML();
+                        }
+                    }
+                    xHttp.open("GET", file, true);
+                    xHttp.send();
+                    /* Exit the function: */
+                    return;
+                }
+            }
+        }
+        includeHTML();
+    </script>
+</body>
+
+</html>

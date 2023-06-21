@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,41 @@
 </head>
 
 <body class="bg-dark text-secondary">
-    <!-- left menu/navbar -->
-    <div include-html="leftMenu.html"></div>
+    <div class="container-fluid">
+        <div class="row my-5">
+            <!-- left menu/navbar -->
+            <div include-html="leftMenu.html"></div>
+        </div>
 
     <!-- body -->
-
-    <!-- footer -->
-    <div include-html="footer.html"></div>
+        <div class="row my-3">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="asset/images/profile.png">
+                        <ul class="social">
+                            <li><a href="https://github.com/lanuxos" class="bi bi-github" target="_blank"></a></li>
+                            <li><a href="https://twitter.com/lanuxos" class="bi bi-twitter" target="_blank"></a></li>
+                            <li><a href="mailto:lanuxos@gmail.com" class="bi bi-envelope" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <div class="team-content">
+                        <div class="team-info">
+                            <h3 class="title font-monospace">LA</h3>
+                            <span class="post">Web Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        
+        <div class="row">
+            <!-- footer -->
+            <div include-html="footer.html"></div>
+        </div>
+    </div>
     <!-- script -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -55,6 +83,55 @@
             }
         }
         includeHTML();
+
+        // iteration through js
+        var laDiary = {
+            /*basicWebDev : {
+                css: "css",
+                html: "html",
+                js: "javaScript"
+            }, 
+            cloud : {
+                azure: "azure",
+                digitalOcean: "digitalOcean",
+                googleCloudPlatform: "googleCloudPlatform",
+                heroku: "heroku",
+                pythonAnywhere: {
+                    register: "register",
+                    directory: "directory"
+                }
+            },*/
+            first: { // objects, contents
+                secondContent: "secondContent",
+                second: { // object, content
+                    thirdContent: "thirdContent",
+                    third: { // keys, values
+                        forthContent: "forthContent",
+                        forth: "content" // key, value
+                    }
+                }
+            }
+        };
+        if ("first" in laDiary) {
+            for (const [objs, cons] of Object.entries(laDiary)) {
+                console.log(`${objs}`);
+                if ("second" in cons) {
+                    for (const [obj, con] of Object.entries(cons)) {
+                        console.log(`${obj}`);
+                        if ("third" in con) {
+                            for (const [keys, values] of Object.entries(con)) {
+                                console.log(`${keys}`);
+                                if ("forth" in values){
+                                    for (const [key, value] of Object.entries(values)) {
+                                    console.log(`${key}: ${value}`);
+                                    };
+                                };
+                            };
+                        };
+                    };
+                };
+            };
+        };
     </script>
 </body>
 
