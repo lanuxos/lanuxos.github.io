@@ -14,6 +14,7 @@
 - javaScript
 ## Cloud [Directory]
 - Azure [Directory]
+- AWS [Directory]
 - DigitalOcean [Directory]
 - Google Cloud Platform [Directory]
 - Heroku [Directory]
@@ -41,14 +42,6 @@
 - Basic Golang [Directory]
 - Fiber [Directory]
     - Fiber Installation [Directory]
-## Lesson [Tips and Tricks, self learning lessons for beginner web developer]
-- Application List
-    - windowsApplicationList.md
-    - macApplicationList.md
-- Git starter guide
-- iTerm2 .zshrc customization
-- Setting up your mac for web dev env
-- Text Editor Extensions
 ## PHP [Directory]
 - Dev environment [Directory]
 - Basic PHP [Directory]
@@ -111,3 +104,11 @@
     - BeautifulSoup4 [Directory]
     - Selenium [Directory]
 ## Security [Directory]
+## Tips and Tricks[self learning lessons for beginner web developer]
+- Application List
+    - windowsApplicationList.md
+    - macApplicationList.md
+- Git starter guide
+- iTerm2 .zshrc customization
+- Setting up your mac for web dev env
+- Text Editor Extensions
