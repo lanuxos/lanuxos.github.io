@@ -78,6 +78,7 @@
         - settings.py [dev/deploy environment]
         - admin.py
         - models.py
+    - Deployment [Directory]
 - Django Rest Framework [Directory]
     - Virtual Environment [Directory]
     - Django Rest Framework Installation [Directory]
@@ -96,6 +97,7 @@
         - admin.py
         - models.py
         - serializers.py
+    - Deployment [Directory]
 - FastAPI [Directory]
 - Flask [Directory]
 - MicroPython [Directory]
