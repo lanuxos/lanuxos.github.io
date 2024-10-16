@@ -17,7 +17,7 @@
             <div include-html="leftMenu.html"></div>
         </div>
 
-    <!-- body -->
+        <!-- body -->
         <div class="row my-3">
             <div class="col-md-4"></div>
             <div class="col-md-4">
@@ -25,10 +25,14 @@
                     <div class="pic">
                         <img src="asset/images/profile.png">
                         <ul class="social">
-                            <li><a href="portfolio.html" class="bi bi-person-lines-fill" title="Portfolio" target="_blank"></a></li>
-                            <li><a href="https://github.com/lanuxos" class="bi bi-github" title="Github" target="_blank"></a></li>
-                            <li><a href="https://twitter.com/lanuxos" class="bi bi-twitter" title="Twitter" target="_blank"></a></li>
-                            <li><a href="mailto:lanuxos@gmail.com" class="bi bi-envelope" title="Contact" target="_blank"></a></li>
+                            <li><a href="portfolio.html" class="bi bi-person-lines-fill" title="Portfolio"
+                                    target="_blank"></a></li>
+                            <li><a href="https://github.com/lanuxos" class="bi bi-github" title="Github"
+                                    target="_blank"></a></li>
+                            <li><a href="https://www.linkedin.com/in/nilavath/" class="bi bi-linkedin" title="LinkedIn"
+                                    target="_blank"></a></li>
+                            <li><a href="mailto:lanuxos@gmail.com" class="bi bi-envelope" title="Contact"
+                                    target="_blank"></a></li>
                         </ul>
                     </div>
                     <div class="team-content">
@@ -41,7 +45,7 @@
             </div>
             <div class="col-md-4"></div>
         </div>
-        
+
         <div class="row">
             <!-- footer -->
             <div include-html="footer.html"></div>
@@ -122,9 +126,9 @@
                         if ("third" in con) {
                             for (const [keys, values] of Object.entries(con)) {
                                 console.log(`${keys}`);
-                                if ("forth" in values){
+                                if ("forth" in values) {
                                     for (const [key, value] of Object.entries(values)) {
-                                    console.log(`${key}: ${value}`);
+                                        console.log(`${key}: ${value}`);
                                     };
                                 };
                             };
@@ -133,6 +137,15 @@
                 };
             };
         };
+
+        // javascript
+        document.getElementById("dark-mode-switch").addEventListener("change", () => {
+            if (document.getElementById("dark-mode-switch").checked == true) {
+                document.documentElement.setAttribute("data-bs-theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-bs-theme", "light");
+            }
+        });
     </script>
 </body>
 
